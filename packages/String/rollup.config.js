@@ -30,12 +30,6 @@ export default {
       extensions,
     }),
     babel({
-      presets: [
-        '@babel/env',
-      ],
-      plugins: [
-        '@babel/plugin-transform-runtime',
-      ],
       babelHelpers: 'runtime',
       exclude: excludePath,
       extensions,
