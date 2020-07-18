@@ -7,14 +7,30 @@ import pkg from './package.json';
 
 const extensions = ['.js'];
 const excludePath = 'node_modules/**';
+const defaultOutputOption = {
+  name: 'String',
+  exports: 'named',
+}
 
 export default {
   input: './index.js',
-  output: {
-    format: 'es',
-    name: 'String',
-    file: pkg.module,
-  },
+  output: [
+    {
+      ...defaultOutputOption,
+      format: 'es',
+      file: pkg.module,
+    },
+    {
+      ...defaultOutputOption,
+      format: 'cjs',
+      file: pkg.main,
+    },
+    {
+      ...defaultOutputOption,
+      format: 'umd',
+      file: pkg.browser,
+    },
+  ],
   plugins: [
     alias({
       resolve: ['', '.js'],

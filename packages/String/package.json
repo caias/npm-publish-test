@@ -2,12 +2,13 @@
   "name": "my-first-npm",
   "version": "1.0.0",
   "description": "my first npm publish test with rollup, jest, lerna, babel",
-  "main": "dist/String.bundle.js",
-  "module": "dist/String.bundle.js",
+  "main": "dist/cjs/String.bundle.js",
+  "module": "dist/esm/String.bundle.js",
+  "browser": "dist/umd/String.bundle.js",
   "scripts": {
     "test": "jest",
-    "clean": "rimraf ./dist",
-    "build": "npm run clean && rollup -c"
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && rollup -c --exports named"
   },
   "repository": {
     "type": "git",
