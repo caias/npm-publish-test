@@ -1,0 +1,43 @@
+{
+  "name": "my-first-npm",
+  "version": "1.0.0",
+  "description": "my first npm publish test with rollup, jest, lerna, babel",
+  "main": "dist/String.bundle.js",
+  "module": "dist/String.bundle.js",
+  "scripts": {
+    "test": "jest",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caias/npm-publish-test.git",
+    "directory": "packages/String"
+  },
+  "keywords": [
+    "rollup",
+    "jest",
+    "lerna",
+    "eslint",
+    "babel"
+  ],
+  "author": "caias <caias1018gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caias/npm-publish-test/issues"
+  },
+  "homepage": "https://github.com/caias/npm-publish-test#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/runtime": "^7.10.5",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-babel": "^5.1.0",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "jest": "^26.1.0",
+    "rollup": "^2.22.0"
+  }
+}
