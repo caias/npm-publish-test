@@ -2,13 +2,14 @@
   "name": "my-first-npm",
   "version": "1.0.0",
   "description": "my first npm publish test with rollup, jest, lerna, babel",
-  "main": "dist/cjs/String.bundle.js",
-  "module": "dist/esm/String.bundle.js",
-  "browser": "dist/umd/String.bundle.js",
+  "main": "dist/String.cjs.bundle.js",
+  "module": "dist/String.esm.bundle.js",
+  "browser": "dist/String.umd.bundle.js",
   "scripts": {
     "test": "jest",
     "clean": "rm -rf ./dist",
-    "build": "npm run clean && rollup -c --exports named"
+    "dev": "npm run clean && rollup -c",
+    "prod": "npm run clean && cross-env NODE_ENV=production rollup -c"
   },
   "repository": {
     "type": "git",
@@ -29,16 +30,20 @@
   },
   "homepage": "https://github.com/caias/npm-publish-test#readme",
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/plugin-transform-runtime": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/runtime": "^7.10.5",
-    "@rollup/plugin-alias": "^3.1.1",
-    "@rollup/plugin-babel": "^5.1.0",
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.4.0",
-    "jest": "^26.1.0",
-    "rollup": "^2.22.0"
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.10.5",
+    "@babel/plugin-transform-runtime": "7.10.5",
+    "@babel/preset-env": "7.10.4",
+    "@babel/runtime": "7.10.5",
+    "@rollup/plugin-alias": "3.1.1",
+    "@rollup/plugin-babel": "5.1.0",
+    "@rollup/plugin-commonjs": "14.0.0",
+    "@rollup/plugin-node-resolve": "8.4.0",
+    "cross-env": "7.0.2",
+    "jest": "26.1.0",
+    "rollup": "2.22.0",
+    "rollup-plugin-eslint": "7.0.0",
+    "rollup-plugin-terser": "6.1.0",
+    "uninstall": "0.0.0"
   }
 }

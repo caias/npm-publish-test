@@ -3,8 +3,10 @@ import alias from '@rollup/plugin-alias';
 import babel from '@rollup/plugin-babel';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
+const isProduction = process.env.NODE_ENV === 'production';
 const extensions = ['.js'];
 const excludePath = 'node_modules/**';
 const defaultOutputOption = {
@@ -50,5 +52,6 @@ export default {
       exclude: excludePath,
       extensions,
     }),
+    isProduction && terser(),
   ],
 };
