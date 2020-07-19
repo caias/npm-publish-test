@@ -45,5 +45,6 @@
     "rollup-plugin-eslint": "7.0.0",
     "rollup-plugin-terser": "6.1.0",
     "uninstall": "0.0.0"
-  }
+  },
+  "gitHead": "ae9117951c715b75313ff11b87eab57a89c5742a"
 }
