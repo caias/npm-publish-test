@@ -1,6 +1,6 @@
 {
   "name": "my-first-npm",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "my first npm publish test with rollup, jest, lerna, babel",
   "main": "dist/String.cjs.bundle.js",
   "module": "dist/String.esm.bundle.js",
