@@ -1,0 +1,22 @@
+{
+  "name": "my-testnpm-v1",
+  "version": "1.0.0",
+  "description": "npm publish test with jest, rollup, lerna",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caias/npm-publish-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caias/npm-publish-test/issues"
+  },
+  "homepage": "https://github.com/caias/npm-publish-test#readme",
+  "dependencies": {
+    "lerna": "^3.22.1"
+  }
+}

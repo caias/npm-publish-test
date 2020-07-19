@@ -9,7 +9,7 @@
     "test": "jest",
     "clean": "rm -rf ./dist",
     "dev": "npm run clean && rollup -c",
-    "prod": "npm run clean && cross-env NODE_ENV=production rollup -c"
+    "build": "npm run clean && cross-env NODE_ENV=production rollup -c"
   },
   "repository": {
     "type": "git",
